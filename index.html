@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" style="border-radius: 20px;" href="./img/img4.svg">
+    <link rel="stylesheet" href="./style.css">
+    <title>Informatik Website</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main-section-1">
+            <div class="main-section-1-left">
+                <h3 class="main-section-1-left-title-1 main-section-1-left-title">Eine einfach aufgebaute Website</h3>
+                <h1 class="main-section-1-left-title-2 main-section-1-left-title">Erstellt für den Informatik Unterricht</h1>
+                <h3 class="main-section-1-left-title-3 main-section-1-left-title">Diese Website wurde ganz einfach mit HTML, CSS und Javascript erstellt. Die Website ist auch responsive (in allen Auflösungen anschaubar).<br>Es wurden keine Frameworks verwendet.<br><span>Erstellt von Mark</span></h3>
+                <span><button class="main-section-1-left-button-1">Mehr anzeigen!</button></span>
+            </div>
+            <div class="main-section-1-right">
+                <img class="main-section-1-right-img-1" src="./img/img1.svg">
+            </div>
+        </div>
+        <div class="main-section-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="main-section-2">
+            <div class="main-section-2-left">
+                <div class="main-section-2-left-figma main-section-2-left-tool">
+                    <h1 class="main-section-2-left-figma-title-1 main-section-2-left-figma-title">Figma <img src="./img/img2.svg"></h1>
+                    <h3 class="main-section-2-left-figma-title-2 main-section-2-left-figma-title">Mit Figma erstelle ich meine Vorlagen für Websiten, die ich dann nachprogrammiere. Das Programm ist kostenlos und ermöglicht hochqualitative Bilder zu exportieren als z.B. SVG, PNG oder JPG (Bild-Dateien). Ein weiterer positiver Aspekt an Figma ist, dass es mit Vektoren arbeitet und diese Technologie die Bilder sehr scharf aussehen lässt. Das Programm wurde von Adobe entwickelt und wird empfohlen für die Bearbeitung von Logos und Vorlagen wie Websites verwendet zu werden.</h3>
+                    <div class="main-section-2-left-figma-buttons">
+                        <button class="main-section-2-left-figma-button-1 main-section-2-left-figma-button">Link zu Figma</button>
+                        <button class="main-section-2-left-figma-button-2 download-btn main-section-2-left-figma-button">Download <img src="./img/img5.svg"></button>
+                    </div>
+                </div>
+                <div class="main-section-2-left-vscode main-section-2-left-tool">
+                    <h1 class="main-section-2-left-vscode-title-1 main-section-2-left-vscode-title">Visual Studio Code <img src="./img/img3.svg"></h1>
+                    <h3 class="main-section-2-left-vscode-title-2 main-section-2-left-vscode-title">Mit Visual Studio programmiere ich nicht alles, aber es ist gut genug um Websiten zu programmieren, vor allem für Projekte mit Javascript/Nodejs. Es wurde von Microsoft entwickelt und ist auch kostenlos. Außerdem bezeichnet man solche Editoren wie Visual Studio Code als IDE. Das sind Editoren, die spezialisiert sind auf das Programmieren.</h3>
+                    <div class="main-section-2-left-vscode-buttons">
+                        <button class="main-section-2-left-vscode-button-1">Link zu Visual Studio</button>
+                        <button class="main-section-2-left-vscode-button-2 download-btn">Download <img src="./img/img5.svg"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section-2-right">
+                <h3 class="main-section-2-right-up-title-1">Es gibt verschiedene Programme zum erstellen von Websiten</h3>
+                <h1 class="main-section-2-right-up-title-2">Programme, die ich verwende zum erstellen von Websiten</h1>
+                <h3 class="main-section-2-right-up-title-3">Um Websiten zu erstellen braucht man natürlich Programme/Tools, die einem alles einfacher machen. Diese Tools verwende ich unteranderem, um Websiten zu erstellen. Das Beste an ihnen ist, dass sie alle gratis sind.</h3>
+            </div>
+        </div>
+        <div class="scroll-back">
+            <img class="scroll-back-icon" src="./img/img7.svg">
+        </div>
+    </div>
+</body>
+<script>
+    const showMore = document.querySelector('.main-section-1-left-button-1');
+    const textContainer = document.querySelector('.main-section-2-right');
+    showMore.addEventListener('click', () => textContainer.scrollIntoView({
+        behavior: "smooth"
+    }));
+
+    const scrollBack = document.querySelector('.scroll-back');
+
+    scrollBack.classList.toggle('hide', scrollY <= 40);
+
+    document.addEventListener('scroll', () => {
+        scrollBack.classList.toggle('hide', scrollY <= 40);
+    });
+
+    scrollBack.addEventListener('click', () => {
+        scroll({
+            behavior: "smooth",
+            top: 0
+        });
+    });
+
+    // Links öffnen wenn man auf die Buttons clickt
+    const figmaButton1 = document.querySelector('.main-section-2-left-figma-button-1');
+    const figmaButton2 = document.querySelector('.main-section-2-left-figma-button-2');
+
+    figmaButton1.addEventListener('click', () => open('https://www.figma.com/'));
+    figmaButton2.addEventListener('click', () => open('hhttps://www.figma.com/downloads/'));
+
+    const vsCodeButton1 = document.querySelector('.main-section-2-left-vscode-button-1');
+    const vsCodeButton2 = document.querySelector('.main-section-2-left-vscode-button-2');
+
+    vsCodeButton1.addEventListener('click', () => open('https://code.visualstudio.com/'));
+    vsCodeButton2.addEventListener('click', () => open('https://code.visualstudio.com/docs/?dv=win'));
+
+    // Damit man die Website nur hochkant anschauen kann
+    screen.orientation.lock('portrait').catch((err) => console.log('Not mobile.'));
+</script>
+</html>
