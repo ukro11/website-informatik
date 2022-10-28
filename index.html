@@ -15,9 +15,12 @@
                 <h3 class="main-section-1-left-title-1 main-section-1-left-title">Eine einfach aufgebaute Website</h3>
                 <h1 class="main-section-1-left-title-2 main-section-1-left-title">Erstellt für den Informatik Unterricht</h1>
                 <h3 class="main-section-1-left-title-3 main-section-1-left-title">Diese Website wurde ganz einfach mit HTML, CSS und Javascript erstellt. Die Website ist auch responsive (in allen Auflösungen anschaubar).<br>Es wurden keine Frameworks verwendet.<br><span>Erstellt von Mark</span></h3>
-                <span><button class="main-section-1-left-button-1">Mehr anzeigen!</button></span>
+                <span>
+					<button class="main-section-1-left-button-1">Mehr anzeigen!</button>
+					<button class="main-section-1-left-button-2">Meine Websiten</button>
+				</span>
             </div>
-            <div class="main-section-1-right">
+            <div class="main-section-1-right"> 
                 <img class="main-section-1-right-img-1" src="./img/img1.svg">
             </div>
         </div>
@@ -77,6 +80,11 @@
             top: 0
         });
     });
+	
+    const myWebsites = document.querySelector('.main-section-1-left-button-2');
+	myWebsites.addEventListener('click', () => {
+		open('https://ukro11.github.io/website-informatik/websites');
+	});
 
     // Links öffnen wenn man auf die Buttons clickt
     const figmaButton1 = document.querySelector('.main-section-2-left-figma-button-1');
