@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/webp" href="./img/img4.svg">
+    <link rel="icon" href="./img/pfp.png">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./public/@all.css">
     <title>Informatik Website</title>
 </head>
 <body>
+    <div class="nav">
+        <a href="https://ukro11.github.io/website-informatik/" class="nav-text nav-text-1">Start</a>
+        <a href="https://ukro11.github.io/website-informatik/" class="nav-text nav-text-2">Projekte</a>
+        <a href="https://ukro11.github.io/website-informatik/" class="nav-text nav-text-3">Programmierkenntisse</a>
+    </div>
     <div class="main">
         <div class="main-section-1">
             <div class="main-section-1-left">
@@ -16,12 +22,9 @@
                 <h1 class="main-section-1-left-title-2 main-section-1-left-title">Erstellt für den Informatik Unterricht</h1>
                 <h3 class="main-section-1-left-title-3 main-section-1-left-title">Diese Website wurde ganz einfach mit HTML, CSS und Javascript erstellt. Die Website ist auch responsive (in allen Auflösungen anschaubar).<br>Es wurden keine Frameworks verwendet.<br><span>Erstellt von Mark</span></h3>
                 <span>
-					<button class="main-section-1-left-button-1">Mehr anzeigen!</button>
-					<button class="main-section-1-left-button-2">Meine Websiten</button>
+					<button data-type="outline" data-animation="white" class="main-section-1-left-button-1">Mehr anzeigen!</button>
+					<button data-type="rect" data-animation="black" class="main-section-1-left-button-2">Meine Projekte</button>
 				</span>
-            </div>
-            <div class="main-section-1-right"> 
-                <img class="main-section-1-right-img-1" src="./img/img1.svg">
             </div>
         </div>
         <div class="main-section-shape">
@@ -35,16 +38,16 @@
                     <h1 class="main-section-2-left-figma-title-1 main-section-2-left-figma-title">Figma <img src="./img/img2.svg"></h1>
                     <h3 class="main-section-2-left-figma-title-2 main-section-2-left-figma-title">Mit Figma erstelle ich meine Vorlagen für Websiten, die ich dann nachprogrammiere. Das Programm ist kostenlos und ermöglicht hochqualitative Bilder zu exportieren als z.B. SVG, PNG oder JPG (Bild-Dateien). Ein weiterer positiver Aspekt an Figma ist, dass es mit Vektoren arbeitet und diese Technologie die Bilder sehr scharf aussehen lässt. Das Programm wurde von Adobe entwickelt und wird empfohlen für die Bearbeitung von Logos und Vorlagen wie Websites verwendet zu werden.</h3>
                     <div class="main-section-2-left-figma-buttons">
-                        <button class="main-section-2-left-figma-button-1 main-section-2-left-figma-button">Link zu Figma</button>
-                        <button class="main-section-2-left-figma-button-2 download-btn main-section-2-left-figma-button">Download <img src="./img/img5.svg"></button>
+                        <button data-type="rect" data-animation="blue-white" class="main-section-2-left-figma-button-1 main-section-2-left-figma-button">Link zu Figma</button>
+                        <button data-type="outline" data-animation="blue" class="main-section-2-left-figma-button-2 download-btn main-section-2-left-figma-button">Download</button>
                     </div>
                 </div>
                 <div class="main-section-2-left-vscode main-section-2-left-tool">
                     <h1 class="main-section-2-left-vscode-title-1 main-section-2-left-vscode-title">Visual Studio Code <img src="./img/img3.svg"></h1>
                     <h3 class="main-section-2-left-vscode-title-2 main-section-2-left-vscode-title">Mit Visual Studio programmiere ich nicht alles, aber es ist gut genug um Websiten zu programmieren, vor allem für Projekte mit Javascript/Nodejs. Es wurde von Microsoft entwickelt und ist auch kostenlos. Außerdem bezeichnet man solche Editoren wie Visual Studio Code als IDE. Das sind Editoren, die spezialisiert sind auf das Programmieren.</h3>
                     <div class="main-section-2-left-vscode-buttons">
-                        <button class="main-section-2-left-vscode-button-1">Link zu Visual Studio</button>
-                        <button class="main-section-2-left-vscode-button-2 download-btn">Download <img src="./img/img5.svg"></button>
+                        <button data-type="rect" data-animation="blue-white" class="main-section-2-left-vscode-button-1">Link zu Visual Studio</button>
+                        <button data-type="outline" data-animation="blue" class="main-section-2-left-vscode-button-2 download-btn">Download</button>
                     </div>
                 </div>
             </div>
@@ -59,27 +62,13 @@
         </div>
     </div>
 </body>
-<script>
+<script src="./public/@all.js"></script>
+<script>    
     const showMore = document.querySelector('.main-section-1-left-button-1');
     const textContainer = document.querySelector('.main-section-2-right');
     showMore.addEventListener('click', () => textContainer.scrollIntoView({
         behavior: "smooth"
     }));
-
-    const scrollBack = document.querySelector('.scroll-back');
-
-    scrollBack.classList.toggle('hide', scrollY <= 40);
-
-    document.addEventListener('scroll', () => {
-        scrollBack.classList.toggle('hide', scrollY <= 40);
-    });
-
-    scrollBack.addEventListener('click', () => {
-        scroll({
-            behavior: "smooth",
-            top: 0
-        });
-    });
 	
     const myWebsites = document.querySelector('.main-section-1-left-button-2');
 	myWebsites.addEventListener('click', () => {
