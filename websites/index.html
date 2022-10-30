@@ -22,8 +22,8 @@
                 <h1 class="main-section-1-text-2 main-section-1-text">Meine neuesten Websiten</h1>
                 <h3 class="main-section-1-text-3 main-section-1-text">Ich programmiere nicht nur Websiten. Um zu erfahren, was ich noch an Programmierfähigkeiten habe, besuche meine <span class="link">Website</span> dazu. Dort findest du Programmiersprachen, die ich mag oder auch kann.</h3>
                 <span>
-                    <button data-type="rect" data-animation="white">Meine Fähigkeiten</button>
-                    <button data-type="outline" data-animation="white">Meine Tools</button>
+                    <button class="main-section-1-button-1" data-type="rect" data-animation="white">Meine Fähigkeiten</button>
+                    <button class="main-section-1-button-2" data-type="outline" data-animation="white">Meine Tools</button>
                 </span>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <h3 class="main-section-2-title-1 main-section-2-title">Meine Websiten</h3>
                 <h1 class="main-section-2-title-2 main-section-2-title">Alle Websiten sind für alle Geräte optimiert</h1>
                 <h2 class="main-section-2-title-3 main-section-2-title">Um zu erfahren welche Programme ich verwende, um meine Website zu machen, besuche meine Start Seite!</h2>
-                <button data-type="outline" data-animation="white">Zur Startseite</button>
+                <button class="main-section-2-button-1" data-type="outline" data-animation="white">Zur Startseite</button>
             </div>
             <div class="main-section-2-projects">
                 <span class="main-section-2-span-1 main-section-2-span">
@@ -65,17 +65,25 @@
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 <script>
     const websiteEmbed = document.querySelectorAll('.main-section-2-span');
+    const baseURL = document.baseURI.replace('websites/index.html', '');
     websiteEmbed.forEach(embed => {
-        const baseURL = document.baseURI.replace('index.html', '');
-
         embed.addEventListener('click', () => {
             if (embed.classList[0].endsWith('1')) {
-                open(baseURL + "spotify/index.html");
+                open(baseURL + "websites/spotify/index.html", '_self');
 
             } else if (embed.classList[0].endsWith('2')) {
-                open(baseURL + "jbl/index.html");
+                open(baseURL + "websites/jbl/index.html", '_self');
             }
         });
-    })
+    });
+
+    const startSeiteBtn1 = document.querySelector('.main-section-1-button-2');
+    const startSeiteBtn2 = document.querySelector('.main-section-2-button-1');
+    startSeiteBtn1.addEventListener('click', () => {
+        open(baseURL + "index.html", '_self');
+    });
+    startSeiteBtn2.addEventListener('click', () => {
+        open(baseURL + "index.html", '_self');
+    });
 </script>
 </html>

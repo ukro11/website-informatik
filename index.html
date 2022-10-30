@@ -71,8 +71,9 @@
     }));
 	
     const myWebsites = document.querySelector('.main-section-1-left-button-2');
+    const baseURL = document.baseURI.replace('index.html', '');
 	myWebsites.addEventListener('click', () => {
-		open('https://ukro11.github.io/website-informatik/websites');
+		open(baseURL + "websites/index.html", '_self');
 	});
 
     // Links öffnen wenn man auf die Buttons clickt
