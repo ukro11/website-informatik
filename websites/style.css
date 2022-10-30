@@ -33,14 +33,14 @@ body {
 }
 
 .main-section-1-text {
-    width: 70%;
+    width: min(70%, 600px);
     text-align: left;
     margin-inline: 50px;
     color: var(--color-white-1);
 }
 
 .main-section-1-text-1 {
-    font-size: 18px;
+    font-size: 22px;
     color: var(--color-blue-1);
 }
 
@@ -50,13 +50,13 @@ body {
 }
 
 .main-section-1-text-3 {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--color-white-2);
 }
 
 .main-section-1-text-container > span {
     display: flex;
-    width: 70%;
+    width: min(70%, 600px);
     margin-top: 10px;
     margin-inline: 50px;
 }
@@ -139,7 +139,7 @@ body {
 }
 
 .main-section-2-title-1 {
-    font-size: 22px;
+    font-size: 24px;
     color: var(--color-blue-3);
 }
 
@@ -151,7 +151,7 @@ body {
 
 .main-section-2-title-3 {
     width: 60%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .main-section-2-text-container > button {
@@ -259,8 +259,8 @@ body {
 
 @media (max-width: 950px) {
     .main-section-2 {
-        height: 900px;
-        min-height: 900px;
+        height: 1000px;
+        min-height: 1000px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -277,7 +277,7 @@ body {
 
     .main-section-2-text-container {
         width: 90%;
-        height: 350px;
+        height: 450px;
     }
 
     .main-section-2-projects > p {
@@ -303,11 +303,17 @@ body {
 }
 
 @media (max-width: 500px) {
+    .main-section-2 {
+        height: 1100px;
+        min-height: 1100px;
+    }
+
     .main-section-2-projects {
         height: 650px;
     }
 
     .main-section-2-text-container {
+        height: 550px;
         padding-top: 50px;
         padding-bottom: 100px;
     }
