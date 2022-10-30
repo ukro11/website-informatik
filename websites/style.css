@@ -128,14 +128,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    width: 70%;
     height: 100%;
     padding-bottom: 100px;
 }
 
 .main-section-2-title {
     width: 80%;
-    margin-inline: 50px;
+    margin-left: 100px;
 }
 
 .main-section-2-title-1 {
@@ -160,7 +160,7 @@ body {
     min-height: 40px;
     height: 40px;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .main-section-2-projects {
@@ -264,6 +264,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .main-section-2-title {
+        margin-left: 0;
+        margin-inline: 50px;
+    }
+
+    .main-section-2-text-container > button {
+        margin-left: 50px;
     }
 
     .main-section-2-text-container {
