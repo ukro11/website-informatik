@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class="nav">
-        <a href="https://ukro11.github.io/website-informatik/index.html" class="nav-text nav-text-1">Start</a>
-        <a href="https://ukro11.github.io/website-informatik/websites/index.html" class="nav-text nav-text-2">Projekte</a>
+        <a href="https://ukro11.github.io/website-informatik/" class="nav-text nav-text-1">Start</a>
+        <a href="https://ukro11.github.io/website-informatik/websites/" class="nav-text nav-text-2">Projekte</a>
         <a href="https://ukro11.github.io/website-informatik/" class="nav-text nav-text-3">Programmierkenntisse</a>
     </div>
     <div class="main">
@@ -65,14 +65,14 @@
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 <script>
     const websiteEmbed = document.querySelectorAll('.main-section-2-span');
-    const baseURL = document.baseURI.replace('websites/index.html', '');
+    const baseURL = document.baseURI.replace('websites/', '');
     websiteEmbed.forEach(embed => {
         embed.addEventListener('click', () => {
             if (embed.classList[0].endsWith('1')) {
-                open(baseURL + "websites/spotify/index.html", '_self');
+                open(baseURL + "websites/spotify/", '_self');
 
             } else if (embed.classList[0].endsWith('2')) {
-                open(baseURL + "websites/jbl/index.html", '_self');
+                open(baseURL + "websites/jbl/", '_self');
             }
         });
     });
@@ -80,10 +80,10 @@
     const startSeiteBtn1 = document.querySelector('.main-section-1-button-2');
     const startSeiteBtn2 = document.querySelector('.main-section-2-button-1');
     startSeiteBtn1.addEventListener('click', () => {
-        open(baseURL + "index.html", '_self');
+        open(baseURL, '_self');
     });
     startSeiteBtn2.addEventListener('click', () => {
-        open(baseURL + "index.html", '_self');
+        open(baseURL, '_self');
     });
 </script>
 </html>
