@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&family=Exo+2:wght@300;400;500;700&family=Oxygen:wght@300;400;700&family=Poppins:wght@400;500;700&family=Prompt:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&family=Dancing+Script:wght@400;500;600;700&family=Exo+2:wght@300;400;500;700&family=Oxygen:wght@300;400;700&family=Poppins:wght@400;500;700&family=Prompt:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
     --font-1: 'poppins', sans-serif;
+    --font-2: Consolas, monospace;
+    --font-3: 'Dancing Script', monospace;
 
     --color-white-1: #FAFAFA;
     --color-white-2: #b8b8b8;
+    --color-white-3: #6e6e6e;
     --color-black-1: #191c20;
     --color-black-2: #0A0507;
     --color-black-3: #21252b;
@@ -13,6 +16,7 @@
     --color-blue-2: #717EC3;
     --color-blue-3: #102E4A;
     --color-blue-4: #6665DD;
+    --color-green-1: #18CD57; 
 }
 
 body {
